@@ -4,6 +4,16 @@
 	"type": "library",
 	"license": "GPL-3.0",
 	"minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/FemboyTeam/BinaryUtils"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/FemboyTeam/RakLib"
+        }
+	],
 	"require": {
 		"php": "^7.4 || ^8.0",
 		"php-64bit": "*",
