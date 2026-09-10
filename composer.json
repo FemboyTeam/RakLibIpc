@@ -12,13 +12,18 @@
         {
             "type": "vcs",
             "url": "https://github.com/FemboyTeam/RakLib"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/FemboyTeam/Log"
         }
 	],
 	"require": {
 		"php": "^7.4 || ^8.0",
 		"php-64bit": "*",
 		"femboyteam/binaryutils": "^0.2.0",
-		"femboyteam/raklib": "^0.14.0"
+		"femboyteam/raklib": "^0.14.0",
+		"femboyteam/log": "^0.4.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "0.12.81",
