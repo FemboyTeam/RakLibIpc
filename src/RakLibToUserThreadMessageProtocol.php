@@ -47,6 +47,7 @@ final class RakLibToUserThreadMessageProtocol{
 	 * byte[] (address)
 	 * short (port)
 	 * long (clientID)
+	 * int32 (raknet protocol version)
 	 */
 	public const PACKET_OPEN_SESSION = 0x02;
 

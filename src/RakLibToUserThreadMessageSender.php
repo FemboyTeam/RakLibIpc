@@ -32,7 +32,7 @@ final class RakLibToUserThreadMessageSender implements ServerEventListener{
 		$this->channel = $channel;
 	}
 
-	public function onClientConnect(int $sessionId, string $address, int $port, int $clientId) : void{
+	public function onClientConnect(int $sessionId, string $address, int $port, int $clientId, int $raknetProtocol) : void{
 		$rawAddr = inet_pton($address);
 		if($rawAddr === false){
 			throw new \InvalidArgumentException("Invalid IP address");
@@ -42,7 +42,8 @@ final class RakLibToUserThreadMessageSender implements ServerEventListener{
 			Binary::writeInt($sessionId) .
 			chr(strlen($rawAddr)) . $rawAddr .
 			Binary::writeShort($port) .
-			Binary::writeLong($clientId)
+			Binary::writeLong($clientId) .
+			Binary::writeInt($raknetProtocol)
 		);
 	}
 
